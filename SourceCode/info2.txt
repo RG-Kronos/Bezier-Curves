@@ -1,0 +1,16 @@
+
+
+
+
+
+
+First Order : Linear
+
+
+Second Order : Quadratic
+
+
+Third Order : Cubic
+
+
+Fourth Order

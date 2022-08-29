@@ -1,0 +1,12 @@
+Consider 2 consecutive points P1(x1,y1) and P2(x2,y2).
+
+Imagine a point on the line between P1 and P2 with some fractional distance t. 
+Hence, P=P1+(P2-P1)*t (for all t between 0 and 1 (inclusive))
+P(x)=P1(x)+(P2(x)-P1(x))*t , P(y)=P1(y)+(P2(y)-P1(y))*t
+
+Considering one particular value of t, repeat the above process for all consecutive point pairs.
+Join all the points for that value of t.
+
+Repeat the process for all fractional distances t from 0 to 1.
+
+The final obtained set of points is the final Bèzier curve.
