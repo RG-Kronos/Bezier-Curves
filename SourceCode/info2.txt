@@ -1,16 +1,14 @@
+The generation of Bèzier curve works as follows:
 
+Let there be N points originally (2 Anchor pints, N-2 control points).
+Assume that the position of all these points is fixed.
 
+There are N-1 lines for each 2 consecutive points.
+On the line whose end points are P1 and P2, one point is chosen based on a parameter t.
+This is repeated for all N-1 lines using the same parameter value t and thus we obtain N-1 points.
 
+Without changing the parameter value t, we repeat the above iteration for the newly obtained N-1 points until we end up with one single point.
+This point is the point of the Bèzier curvature for the chosen parameter value t.
+We plot all such points for all parameter values of t.
 
-
-
-First Order : Linear
-
-
-Second Order : Quadratic
-
-
-Third Order : Cubic
-
-
-Fourth Order
+The final set of points obtained is the final Bèzier curve.
