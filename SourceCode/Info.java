@@ -54,7 +54,7 @@ public class Info implements MouseListener
         description.setLineWrap(true);
         description.setWrapStyleWord(true);
         description.setBounds(635, 120, 535, 620);
-        description.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 23));
+        description.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 22));
         description.setBackground(bgc1);
         description.setForeground(text_c1);
         
