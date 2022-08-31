@@ -1,12 +1,17 @@
-Consider 2 consecutive points P1(x1,y1) and P2(x2,y2).
+Consider 3 points P1(x1,y1), P2(x2,y2), P3(x3,y3).
+Consider the function for generating a new point P from P1 and P2 as:
 
-Imagine a point on the line between P1 and P2 with some fractional distance t. 
-Hence, P=P1+(P2-P1)*t (for all t between 0 and 1 (inclusive))
-P(x)=P1(x)+(P2(x)-P1(x))*t , P(y)=P1(y)+(P2(y)-P1(y))*t
+P=f(P1,P2,t)=P1+(P2-P1)*t i.e, 
+P(x)=P1(x)+(P2(x)-P1(x))*t
+P(y)=P1(y)+(P2(y)-P1(y))*t  ... Where t is some fractional distance such that (0≤t≤1)
 
-Considering one particular value of t, repeat the above process for all consecutive point pairs.
-Join all the points for that value of t.
+Consider some fractional distance t.
+
+For P1 and P2, generate P1' as: P1'=f(P1,P2,t)
+For P2 and P3, generate P2' as: P2'=f(P2,P3,t)
+
+For points P1' and P2', generate the final point P as: P=f(P1',P2',t)
+This is the point of the curve for the chosen t value.
 
 Repeat the process for all fractional distances t from 0 to 1.
-
 The final obtained set of points is the final Bèzier curve.
