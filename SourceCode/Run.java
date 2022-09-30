@@ -1,5 +1,3 @@
-package SourceCode;
-
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
