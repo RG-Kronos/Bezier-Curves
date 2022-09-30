@@ -1,5 +1,3 @@
-package SourceCode;
-
 import java.util.ArrayList;
 
 import javax.swing.JButton;
