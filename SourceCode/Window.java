@@ -1,5 +1,3 @@
-package SourceCode;
-
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
