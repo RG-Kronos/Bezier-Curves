@@ -29,9 +29,11 @@ public class Run extends JPanel implements MouseListener, MouseMotionListener
     JButton run=new JButton();
 
     // JTextField run=new JTextField();
+    
+    String cwd=System.getProperty("user.dir");
 
-    ImageIcon cp_icon=new ImageIcon(getClass().getResource("cp_icon.png"));
-    ImageIcon ap_icon=new ImageIcon(getClass().getResource("ap_icon.png"));
+    ImageIcon cp_icon=new ImageIcon(cwd+"/images/cp_icon.png");
+    ImageIcon ap_icon=new ImageIcon(cwd+"/images/ap_icon.png");
 
     ArrayList<JButton> points=new ArrayList<>();
 
@@ -77,7 +79,7 @@ public class Run extends JPanel implements MouseListener, MouseMotionListener
         run_panel.add(this);
 
         this.setLayout(null);
-        this.setBounds(50, 150, 1150, 640);
+        this.setBounds(50, 150, 1150, 650);
         this.setBackground(bgc2);
         this.setBorder(BorderFactory.createLineBorder(text_c2, 1));
         this.add(ap1); 
@@ -240,6 +242,20 @@ public class Run extends JPanel implements MouseListener, MouseMotionListener
             p.add(i);
         }
         p.add(ap2);
+        
+        g2d.setColor(new Color(0x024a45));
+        
+        for(int i=1; i<650/50; i++)
+        {
+        	g2d.drawLine(0, i*50, 1150, i*50);
+        }
+        
+        for(int i=1; i<1150/50; i++)
+        {
+        	g2d.drawLine(i*50, 0, i*50, 650);
+        }
+        
+        g2d.setColor(text_c1);
 
         for(int i=0; i<p.size()-1; i++)
         {
@@ -251,6 +267,7 @@ public class Run extends JPanel implements MouseListener, MouseMotionListener
             g2d.drawLine(x1, y1, x2, y2);
         }
         
+        g2d.setColor(Color.YELLOW);
         float step=0.03125f;
         ArrayList<int[]> lp=new ArrayList<>();
         lp=obj.get_points(p, step);
