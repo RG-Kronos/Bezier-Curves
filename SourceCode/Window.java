@@ -26,11 +26,13 @@ public class Window implements MouseListener
     JButton info=new JButton();
     JButton run=new JButton();
     JButton exit=new JButton();
+    
+    String cwd=System.getProperty("user.dir");
 
-    ImageIcon home_icon=new ImageIcon(getClass().getResource("HomeIcon.png"));
-    ImageIcon info_icon=new ImageIcon(getClass().getResource("InfoIcon.png"));
-    ImageIcon run_icon=new ImageIcon(getClass().getResource("RunIcon.png"));
-    ImageIcon exit_icon=new ImageIcon(getClass().getResource("ExitIcon.png"));
+    ImageIcon home_icon=new ImageIcon(cwd+"/images/HomeIcon.png");
+    ImageIcon info_icon=new ImageIcon(cwd+"/images/InfoIcon.png");
+    ImageIcon run_icon=new ImageIcon(cwd+"/images/RunIcon.png");
+    ImageIcon exit_icon=new ImageIcon(cwd+"/images/ExitIcon.png");
 
     Color bgc1=new Color(0x0b0c10);
     Color bgc2=new Color(0x1f2833);
@@ -55,24 +57,28 @@ public class Window implements MouseListener
         home.setHorizontalAlignment(JButton.CENTER);
         home.setBorderPainted(false);
         home.setBounds(25, 290, 50, 50);
+        home.setFocusable(false);
         home.addMouseListener(this);
 
         info.setIcon(info_icon);
         info.setHorizontalAlignment(JButton.CENTER);
         info.setBorderPainted(false);
         info.setBounds(25, 360, 50, 50);
+        info.setFocusable(false);
         info.addMouseListener(this);
 
         run.setIcon(run_icon);
         run.setHorizontalAlignment(JButton.CENTER);
         run.setBorderPainted(false);
         run.setBounds(25, 430, 50, 50);
+        run.setFocusable(false);
         run.addMouseListener(this);
 
         exit.setIcon(exit_icon);
         exit.setHorizontalAlignment(JButton.CENTER);
         exit.setBorderPainted(false);
         exit.setBounds(25, 500, 50, 50);
+        exit.setFocusable(false);
         exit.addMouseListener(this);
 
     }
